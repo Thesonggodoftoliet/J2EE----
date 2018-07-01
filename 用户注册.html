@@ -1,0 +1,63 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>用户注册</title>
+<style>
+	.div1{
+		height: 600px;
+		width: 50%;
+		margin-left: 25%;
+		border-color: skyblue;
+		border: groove;
+	}
+	
+	.form{
+		height: 20px;
+		width: 150px;
+	}
+	
+</style>
+</head>
+
+<body>
+<div class="div1">
+  <form>
+			<ul style="list-style: none;padding-top: 2%;">
+				<li style="float: left;margin-left: 10px;">用 户 名:<input type="text" class="form"><a style="color: red;"> *</a></li>
+				<li style="float: left;margin-left: 200px;">姓&nbsp;名:<input type="text" class="form"><a style="color: red;"> *</a></li>
+			</ul>
+			<ul style="list-style: none;padding-top: 4%;">
+				<li style="float: left;margin-left: 10px;">输入密码:<input type="password" class="form"><a style="color: red;"> *</a></li>
+				<li style="float: left;margin-left: 200px;">性&nbsp;别:<input type="radio" name="sex" value="男" checked>男 <input type="radio" name="sex" value="女">女<a style="color: red;"> *</a></li>
+			</ul>
+			<ul style="list-style: none;padding-top: 4%;">
+				<li style="float: left;margin-left: 10px;">重复密码:<input type="password" class="form"><a style="color: red;"> *</a></li>
+				<li style="float: left;margin-left: 200px;">地&nbsp;址:<input type="text" class="form"></li>
+			</ul>
+			<ul style="list-style: none;padding-top: 4%;">
+				<li style="float: left;margin-left: 10px;">证件类型:<select class="form">
+																  <option>身份证</option>
+																  <option>军官证</option>
+																  <option>残疾证</option>
+																  <option>港澳同胞身份证</option>
+				</select><a style="color: red;"> *</a></li>
+				<li style="float: left;margin-left: 202px;">邮&nbsp;箱:<input type="email" class="form"></li>
+			</ul>
+			<ul style="list-style: none;">
+				<li style="margin-left: 10px;padding-top: 4%;">证件号码:<input type="password" class="form"><a style="color: red;"> *</a></li>
+				<li style="margin-left: 10px;padding-top: 4%;">电话号码:<input type="tel" class="form"></li>
+				<li style="margin-left: 10px;padding-top: 4%;">旅客类型:<select class="form">
+																		<option>成人</option>
+																		<option>学生</option>
+																		<option>儿童</option>
+																		<option>退休老人</option>
+				</select></li>
+				<li style="margin-left: 10px;padding-top: 4%;"><input type="checkbox" name="checkbox1">我已阅读并同意<a href="http://www.12306.cn/mormhweb/gljd/wzls/" target="_blank">《中国铁路服务条款》</a></li>
+			</ul>
+
+			<div style="padding-left: 50px;"><input type="submit" value="注册"></div>
+		</form>
+</div>
+</body>
+</html>
