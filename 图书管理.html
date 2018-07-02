@@ -1,0 +1,149 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>图书管理</title>
+<style type="text/css">
+	.text{
+		width: 75px;
+		height: 20px;
+		color: grey;
+		font-family: SimHei;
+	}
+	
+	.div{
+		margin-left: 36%;
+		margin-top: 10%;
+		height: auto;
+		width: 600px;
+		background-color:sandybrown;
+		border-color: salmon;
+		border-width: 20px;
+		border-top-style: solid;
+	}
+	.div div{
+		padding-left: 20%;
+	}
+	
+</style>
+
+</head>
+
+<body>
+<div class="div">
+<div>
+<table id="mytable">
+	<tr id="tr0">
+		<td>编号</td>
+		<td>作者</td>
+		<td>标题</td>
+		<td>价格</td>
+	</tr>
+	<tr id="tr1">
+		<td>1</td>
+		<td>Tom</td>
+		<td>Java编程思想</td>
+		<td>50.0</td>
+		<td><a href="后台编辑.html" target="_blank">修改</a></td>
+		<td><a href="#" onClick="deleteRow(this)">删除</a></td>
+	</tr>	
+	<tr id="tr2">
+		<td>2</td>
+		<td>Jerry</td>
+		<td>Oracle DBA 教材</td>
+		<td>60.0</td>
+		<td><a href="后台编辑.html" target="_blank">修改</a></td>
+		<td><a href="#" onClick="deleteRow(this)">删除</a></td>
+	</tr>	
+	<tr id="tr3">
+		<td>3</td>
+		<td>Bob</td>
+		<td>Ruby</td>
+		<td>50.0</td>
+		<td><a href="后台编辑.html" target="_blank">修改</a></td>
+		<td><a href="#" onClick="deleteRow(this)">删除</a></td>
+	</tr>	
+	<tr id="tr4">
+		<td>4</td>
+		<td>Mike</td>
+		<td>JavaScript</td>
+		<td>51.0</td>
+		<td><a href="后台编辑.html" target="_blank">修改</a></td>
+		<td><a href="#" onClick="deleteRow(this)">删除</a></td>
+	</tr>	
+	<tr id="tr5">
+		<td>5</td>
+		<td>Rose</td>
+		<td>Ajax</td>
+		<td>52.0</td>
+		<td><a href="后台编辑.html" target="_blank">修改</a></td>
+		<td><a href="#" onClick="deleteRow(this)">删除</a></td>
+	</tr>	
+	<tr id="tr6">
+		<td>6</td>
+		<td>Backham</td>
+		<td>Struts</td>
+		<td>53.0</td>
+		<td><a href="后台编辑.html" target="_blank">修改</a></td>
+		<td><a href="#" onClick="deleteRow(this)">删除</a></td>
+	</tr>	
+	<tr id="tr7">
+		<td>7</td>
+		<td>Zidon</td>
+		<td>Hibemate</td>
+		<td>54.0</td>
+		<td><a href="后台编辑.html" target="_blank">修改</a></td>
+		<td><a href="#" onClick="deleteRow(this)">删除</a></td>
+	</tr>	
+	<tr id="tr8">
+		<td>8</td>
+		<td>Ronaerdo</td>
+		<td>Spring</td>
+		<td>55.0</td>
+		<td><a href="后台编辑.html" target="_blank">修改</a></td>
+		<td><a href="#" onClick="deleteRow(this)">删除</a></td>
+	</tr>
+</table>
+<br>
+
+<input type="text" value="请输入编号" id="text1" onMouseOver="this.value=''" class="text"> <!--onMouseOver="clear(this)"-->
+<input type="text" value="请输入作者" id="text2" onMouseOver="this.value=''" class="text"> 
+<input type="text" value="请输入标题" id="text3" onMouseOver="this.value=''" class="text">
+<input type="text" value="请输入价格" id="text4" onMouseOver="this.value=''" class="text">
+<input type="button" value="插入" onClick="insertRow()">
+</div></div>
+
+<!--script-->
+<script type="text/javascript">
+function deleteRow(r){
+	var index = r.parentNode.parentNode.rowIndex;
+	var table = document.getElementById('mytable');
+//	var rows = table.rows.length;
+//	for(var i=index;i<rows;i++){
+//		table.rows.item(i).lins.item(0).nodeValue="i";
+//	}
+	table.deleteRow(index);
+		
+}
+
+function insertRow(){
+	var table = document.getElementById('mytable');
+	var rownum = table.length;
+	var row = table.insertRow(rownum);
+	for(var i=0;i<4;i++){
+		row.insertCell(i).innerHTML=document.getElementById('text'+(i+1)).value;
+	}
+	row.insertCell(4).innerHTML="<a href='后台编辑.html' target='_blank'>修改</a>";
+	row.insertCell(5).innerHTML="<a href='#' onClick='deleteRow(this)'>删除</a>";
+	
+	
+}
+
+//	加载失败？
+//window.onload=function clear(r){
+//	r.value='';
+//}
+	
+</script>
+</body>
+</html>
