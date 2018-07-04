@@ -27,6 +27,9 @@
 	
 </style>
 
+<script type="text/javascript" src="js/jquery-1.7.2.js"></script>
+
+
 </head>
 
 <body>
@@ -45,7 +48,7 @@
 		<td>Java编程思想</td>
 		<td>50.0</td>
 		<td><a href="后台编辑.html" target="_blank">修改</a></td>
-		<td><a href="#" onClick="deleteRow(this)">删除</a></td>
+		<td><a href="#" class="del">删除</a></td>
 	</tr>	
 	<tr id="tr2">
 		<td>2</td>
@@ -115,6 +118,12 @@
 
 <!--script-->
 <script type="text/javascript">
+$(function(){
+	$(".del").live('click',function(){
+		alert("nihao");
+	$(this).parents("tr").remove();
+});
+});
 function deleteRow(r){
 	var index = r.parentNode.parentNode.rowIndex;
 	var table = document.getElementById('mytable');
@@ -123,6 +132,7 @@ function deleteRow(r){
 //		table.rows.item(i).lins.item(0).nodeValue="i";
 //	}
 	table.deleteRow(index);
+
 		
 }
 
